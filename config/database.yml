@@ -1,0 +1,25 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  port: 5432
+  schema_search_path: public
+
+development:
+  <<: *common
+  database: spree_demo_development
+  username: spree_demo
+  password: spree_demo
+
+test:
+  <<: *common
+  database: spree_demo_test
+  username: spree_demo
+  password: spree_demo
+
+production:
+  <<: *common
+  database: spree_demo_production
+  username: spree_demo
+  password: spree_demo
